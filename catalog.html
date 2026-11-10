@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог ИИ-инструментов для школьных предметов: точные, естественные и гуманитарные науки, программирование и проектная работа.">
+  <meta name="theme-color" content="#06101d">
+  <title>Каталог ИИ-инструментов — ИИ в жизни современной школы</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="На главную — ИИ в современной школе">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M32 4 55 12v18c0 14.8-9.2 24.7-23 30C18.2 54.7 9 44.8 9 30V12L32 4Z" fill="#0e2741" stroke="currentColor" stroke-width="2"/><text x="32" y="38" text-anchor="middle" fill="currentColor" font-size="22" font-family="Georgia, serif" font-weight="700">Г1</text></svg></span>
+        <span class="brand-copy"><strong>ИИ в современной школе</strong><span>Гимназия № 1 · Ковров</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Открыть меню"><span class="menu-toggle-lines" aria-hidden="true"></span></button>
+      <nav class="site-nav" id="main-navigation" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="gymnasium.html">О гимназии</a></li>
+          <li><a href="catalog.html" aria-current="page">Каталог ИИ</a></li>
+          <li><a href="teachers.html">Кафедры</a></li>
+          <li><a href="practice.html">Практикум</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span aria-current="page">Каталог ИИ</span></nav>
+        <span class="eyebrow">9 практических решений</span>
+        <h1 id="page-title">Каталог ИИ-инструментов по предметам</h1>
+        <p class="lead">Не список сервисов для готовых ответов, а методическая карта: какая технология подходит задаче, как построить работу и что обязательно проверить самостоятельно.</p>
+        <span class="page-marker">Фильтрация работает без перезагрузки страницы</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-heading section-heading--single">
+          <span class="eyebrow">Учебные сценарии</span>
+          <h2 id="catalog-title">Выберите предметное направление</h2>
+          <p>Один инструмент может относиться сразу к нескольким направлениям. Фильтры помогают быстро собрать свой набор для профильной подготовки.</p>
+        </div>
+
+        <div class="filter-toolbar" role="group" aria-label="Фильтр каталога">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">Все предметы</button>
+          <button class="filter-button" type="button" data-filter="physics" aria-pressed="false">Физика, Алгебра и Астрономия</button>
+          <button class="filter-button" type="button" data-filter="code" aria-pressed="false">Информатика и Код</button>
+          <button class="filter-button" type="button" data-filter="humanities" aria-pressed="false">Литература, История и Иностранные языки</button>
+          <button class="filter-button" type="button" data-filter="science" aria-pressed="false">Биология и Химия</button>
+        </div>
+        <p class="filter-status" id="filter-status" aria-live="polite">Показано инструментов: 9 из 9</p>
+
+        <div class="catalog-grid" id="catalog-grid">
+          <article class="tool-card" data-categories="physics">
+            <div class="tool-head"><span class="tool-number">01</span><ul class="tag-list"><li class="tag">Точные науки</li></ul></div>
+            <h2>Gemini 2.5 Pro / ChatGPT o3</h2>
+            <p class="tool-summary">Пошаговый тьютор по кинематике, динамике и математическому анализу.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Попросить не решать задачу сразу, а сначала определить известные величины, закон и план из 3–5 шагов.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Сверить единицы измерения, знаки, область допустимых значений и ответ по учебнику или собственной подстановкой.</dd></div>
+              <div><dt>Не использовать</dt><dd>Для переноса полного решения в работу без понимания каждого преобразования.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Кинематика</li><li class="tag">Динамика</li><li class="tag">Матанализ</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="physics">
+            <div class="tool-head"><span class="tool-number">02</span><ul class="tag-list"><li class="tag">Вычисления</li></ul></div>
+            <h2>WolframAlpha &amp; Desmos AI</h2>
+            <p class="tool-summary">Символьная алгебра, графики с параметром №18 ЕГЭ и вычисления в астрофизике.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Сначала получить собственную гипотезу о числе решений, затем менять параметр на графике и фиксировать критические значения.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Подтвердить найденные границы аналитически: через дискриминант, касание, монотонность или систему уравнений.</dd></div>
+              <div><dt>Не использовать</dt><dd>Как замену выводу формулы и доказательству переходов.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Алгебра</li><li class="tag">№18 ЕГЭ</li><li class="tag">Астрофизика</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="humanities">
+            <div class="tool-head"><span class="tool-number">03</span><ul class="tag-list"><li class="tag">Работа с источником</li></ul></div>
+            <h2>NotebookLM</h2>
+            <p class="tool-summary">Анализ строго по загруженным текстам классических произведений без выдумывания цитат.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Загрузить текст «Грозы», «Горя от ума» или «Евгения Онегина», задать вопрос о конфликте и попросить указать место в источнике.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Открыть исходный фрагмент, проверить точность цитаты и объяснить её роль собственными словами.</dd></div>
+              <div><dt>Не использовать</dt><dd>Для сочинения, где позиция и аргументация должны принадлежать ученику.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Островский</li><li class="tag">Грибоедов</li><li class="tag">Пушкин</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="code">
+            <div class="tool-head"><span class="tool-number">04</span><ul class="tag-list"><li class="tag">Программирование</li></ul></div>
+            <h2>GitHub Copilot &amp; Cursor IDE</h2>
+            <p class="tool-summary">Отладка кода на Python и C++, разбор алгоритмов и задач КЕГЭ по информатике.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Передать минимальный пример ошибки и попросить объяснить причину, предложить тесты и подсказку без готового финального кода.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Запустить граничные тесты, оценить сложность алгоритма и самостоятельно переписать исправление.</dd></div>
+              <div><dt>Не использовать</dt><dd>Для вставки непонятого кода и передачи закрытых данных в облачный сервис.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Python</li><li class="tag">C++</li><li class="tag">КЕГЭ</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="humanities">
+            <div class="tool-head"><span class="tool-number">05</span><ul class="tag-list"><li class="tag">Английский язык</li></ul></div>
+            <h2>DeepL Write &amp; ELSA Speak AI</h2>
+            <p class="tool-summary">Тренажёр письменного эссе и устной части ЕГЭ по английскому языку.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Сначала написать собственный текст или записать речь, затем запросить объяснение 3 главных ошибок и упражнение на каждую.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Сохранить первоначальный вариант, сравнить правки и проговорить исправленные фразы без подсказки.</dd></div>
+              <div><dt>Не использовать</dt><dd>Для полной автоматической переписи эссе перед сдачей.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Эссе</li><li class="tag">Произношение</li><li class="tag">ЕГЭ</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="physics code humanities science">
+            <div class="tool-head"><span class="tool-number">06</span><ul class="tag-list"><li class="tag">Исследование</li></ul></div>
+            <h2>Perplexity AI Academic</h2>
+            <p class="tool-summary">Поиск проверяемых научных источников для индивидуальных проектов 10 класса.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Сформулировать исследовательский вопрос, ограничить период и попросить первичные источники с авторами, датой и ссылкой.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Открыть каждый источник, проверить соответствие утверждения оригиналу и оформить библиографию по требованиям руководителя.</dd></div>
+              <div><dt>Не использовать</dt><dd>Для цитирования пересказа ИИ вместо прочитанной публикации.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Источники</li><li class="tag">Фактчекинг</li><li class="tag">Проект</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="science">
+            <div class="tool-head"><span class="tool-number">07</span><ul class="tag-list"><li class="tag">3D-модели</li></ul></div>
+            <h2>AlphaFold Server &amp; MolView</h2>
+            <p class="tool-summary">Трёхмерная визуализация белков и молекул на профильной биологии и химии.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Сравнить предсказанную структуру с учебной схемой, выделить функциональные участки и сформулировать ограничения модели.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Проверить легенду, химическую формулу, типы связей и показатель уверенности предсказания.</dd></div>
+              <div><dt>Не использовать</dt><dd>Как доказанный экспериментальный результат без проверки научной публикацией.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Белки</li><li class="tag">Молекулы</li><li class="tag">Структура</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="physics">
+            <div class="tool-head"><span class="tool-number">08</span><ul class="tag-list"><li class="tag">Стереометрия</li></ul></div>
+            <h2>GeoGebra 3D + AI</h2>
+            <p class="tool-summary">Построение сечений многогранников и проверка пространственных гипотез.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Сначала выполнить чертёж от руки, затем построить модель по заданным точкам и исследовать положение плоскости при вращении.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Обосновать каждую линию сечения принадлежностью одной грани и проверить замкнутость многоугольника.</dd></div>
+              <div><dt>Не использовать</dt><dd>Для подмены геометрического доказательства красивой визуализацией.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Сечения</li><li class="tag">Многогранники</li><li class="tag">Модель</li></ul>
+          </article>
+
+          <article class="tool-card" data-categories="physics code humanities science">
+            <div class="tool-head"><span class="tool-number">09</span><ul class="tag-list"><li class="tag">Защита проекта</li></ul></div>
+            <h2>Gamma App</h2>
+            <p class="tool-summary">Оформление презентаций и инфографики для защиты индивидуальных проектов.</p>
+            <dl class="tool-method">
+              <div><dt>Методика</dt><dd>Передать собственный проверенный план и данные, ограничить число слайдов и попросить по одному тезису на экран.</dd></div>
+              <div><dt>Самопроверка</dt><dd>Удалить вымышленные факты, проверить числа, источники, авторские права на изображения и единообразие терминов.</dd></div>
+              <div><dt>Не использовать</dt><dd>Для автоматической генерации содержания проекта, которое автор не может защитить устно.</dd></div>
+            </dl>
+            <ul class="tag-list"><li class="tag">Презентация</li><li class="tag">Инфографика</li><li class="tag">Выступление</li></ul>
+          </article>
+        </div>
+
+        <div class="integrity-note">
+          <span class="integrity-icon" aria-hidden="true">!</span>
+          <div><strong>Общее правило.</strong> Перед использованием сервиса проверьте его возрастные ограничения и политику данных. Не передавайте персональные данные, пароли, закрытые документы гимназии или неопубликованные работы других людей.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact section--tinted" aria-labelledby="next-title">
+      <div class="container">
+        <div class="surface-card">
+          <span class="eyebrow">Следующий шаг</span>
+          <h2 id="next-title">Инструмент выбран — сформулируйте задачу</h2>
+          <p class="lead">Хороший результат начинается с ясного запроса: роль, предмет, контекст, ограничения, формат ответа и обязательная проверка.</p>
+          <a class="button" href="practice.html">Открыть конструктор промптов</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><a class="brand" href="index.html" aria-label="На главную"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M32 4 55 12v18c0 14.8-9.2 24.7-23 30C18.2 54.7 9 44.8 9 30V12L32 4Z" fill="#0e2741" stroke="currentColor" stroke-width="2"/><text x="32" y="38" text-anchor="middle" fill="currentColor" font-size="22" font-family="Georgia, serif" font-weight="700">Г1</text></svg></span><span class="brand-copy"><strong>ИИ в современной школе</strong><span>Индивидуальный проект</span></span></a><p>Учебный проект об осмысленном использовании искусственного интеллекта в образовательной среде гимназии.</p></div>
+        <div><h2 class="footer-heading">Контакты гимназии</h2><ul class="footer-list"><li>601900, Владимирская область,<br>г. Ковров, ул. Абельмана, д. 15</li><li><a href="tel:+74923221232">+7 (49232) 2-12-32</a></li><li><a href="tel:+74923221265">+7 (49232) 2-12-65</a></li><li><a href="mailto:gimnaziya1_kovrov@mail.ru">gimnaziya1_kovrov@mail.ru</a></li></ul></div>
+        <div><h2 class="footer-heading">Реквизиты</h2><ul class="footer-list"><li>ИНН 3305037448</li><li>ОГРН 1023301953708</li><li>Директор: Ирина Александровна Краснова</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 · Индивидуальный проект ученика 10 класса</span><span>Информационный учебный ресурс · Не является официальным сайтом гимназии</span></div>
+    </div>
+  </footer>
+</body>
+</html>
