@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Промпт-лаборатория и Тест — Гимназия № 1 г. Ковров</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-badge">Г1</div>
+                <div class="brand-text">
+                    Гимназия № 1 им. А. Н. Барсукова
+                    <span>г. Ковров • Индивидуальный проект 10 класса</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link ">Главная</a>
+<a href="gymnasium.html" class="nav-link ">О Гимназии № 1</a>
+<a href="catalog.html" class="nav-link ">Каталог ИИ</a>
+<a href="teachers.html" class="nav-link ">Кафедры и учителя</a>
+<a href="practice.html" class="nav-link active">Промпт-лаборатория</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">⚡ Практический модуль проекта</div>
+                <h1>Промпт-лаборатория и <span class="gradient-text">проверка ИИ-грамотности</span></h1>
+                <p>Соберите профессиональный учебный запрос (промпт) по формуле «Роль + Предмет + Задача + Ограничения» и проверьте свои знания в интерактивном блиц-тесте.</p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top:10px;">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="card">
+                        <span class="tag">Конструктор промптов</span>
+                        <h3>Настройте параметры учебного запроса</h3>
+
+                        <div class="form-group" style="margin-top:14px;">
+                            <label for="prompt-role">1. Выберите роль для ИИ:</label>
+                            <select id="prompt-role" class="form-control">
+                                <option value="опытный эксперт ЕГЭ и учитель высшей категории">Эксперт ЕГЭ и учитель профильного класса</option>
+                                <option value="тренер олимпиадной сборной по точным наукам">Тренер олимпиадной сборной (ВсОШ)</option>
+                                <option value="научный руководитель школьного проекта">Научный руководитель индивидуального проекта</option>
+                                <option value="литературный критик и филолог">Литературный критик и филолог</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prompt-subject">2. Выберите школьный предмет:</label>
+                            <select id="prompt-subject" class="form-control">
+                                <option value="Физика (кинематика и динамика)">Физика</option>
+                                <option value="Алгебра и начала математического анализа">Алгебра и матанализ</option>
+                                <option value="Русская литература (10 класс)">Русская литература</option>
+                                <option value="Информатика и программирование на Python">Информатика</option>
+                                <option value="Астрономия и астрофизика">Астрономия</option>
+                                <option value="Биология и генетика">Биология</option>
+                                <option value="Английский язык">Английский язык</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prompt-goal">3. Что именно нужно сделать?</label>
+                            <select id="prompt-goal" class="form-control">
+                                <option value="Пошагово объяснить алгоритм решения задач и разобрать ловушки">Объяснить алгоритм решения и ловушки</option>
+                                <option value="Подобрать аргументы и цитаты для сочинения (250–300 слов)">Подобрать аргументы для сочинения (250–300 слов)</option>
+                                <option value="Составить индивидуальный тренажёр из 5 задач с подсказками">Составить тренажёр из 5 задач с подсказками</option>
+                                <option value="Сформировать план исследования и гипотезу проекта">Сформировать план и гипотезу проекта</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prompt-topic">4. Укажите тему урока или произведения:</label>
+                            <input type="text" id="prompt-topic" class="form-control" placeholder="Например: Тема родительской любви в пьесе «Гроза» или Движение тела под углом к горизонту" value="Движение тела, брошенного под углом к горизонту">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prompt-level">5. Уровень подготовки:</label>
+                            <select id="prompt-level" class="form-control">
+                                <option value="Профильный 10 класс (подготовка к части 2 ЕГЭ)">Профильный 10 класс (углублённый)</option>
+                                <option value="Базовый школьный уровень (понятно и наглядно)">Базовый уровень (с простыми аналогиями)</option>
+                                <option value="Олимпиадный уровень (повышенная сложность)">Олимпиадный уровень</option>
+                            </select>
+                        </div>
+
+                        <button id="generate-prompt-btn" class="btn btn-primary" style="width:100%;">Сгенерировать промпт</button>
+                    </div>
+
+                    <div class="card">
+                        <span class="tag purple">Готовый результат</span>
+                        <h3>Скопируйте запрос в нейросеть</h3>
+                        <p>Этот промпт защищает от «галлюцинаций» и заставляет ИИ объяснять логику, а не просто выдавать ответ:</p>
+                        <div id="prompt-result" class="prompt-output"></div>
+                        <button id="copy-prompt-btn" class="btn btn-outline" style="width:100%;">📋 Скопировать готовый промпт</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Блиц-тест: умеешь ли ты учиться с помощью ИИ?</h2>
+                    <p id="quiz-score" style="color:#60a5fa; font-weight:600;">Выберите правильный вариант в каждом из 4 вопросов</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card quiz-question">
+                        <span class="tag">Вопрос 1 из 4</span>
+                        <h3>Что такое «галлюцинация» большой языковой модели?</h3>
+                        <div style="margin-top:12px;">
+                            <button class="quiz-option" data-correct="false">Сбой видеокарты при генерации картинки</button>
+                            <button class="quiz-option" data-correct="true">Уверенно сформулированный ответ ИИ, содержащий вымышленные факты, несуществующие цитаты или неверные формулы</button>
+                            <button class="quiz-option" data-correct="false">Слишком медленный ответ сервера из-за высокой нагрузки</button>
+                        </div>
+                    </div>
+
+                    <div class="card quiz-question">
+                        <span class="tag">Вопрос 2 из 4</span>
+                        <h3>Какой инструмент лучше выбрать для точного подбора цитат строго по тексту пьесы «Гроза» А. Н. Островского?</h3>
+                        <div style="margin-top:12px;">
+                            <button class="quiz-option" data-correct="true">NotebookLM с загруженным оригинальным текстом пьесы</button>
+                            <button class="quiz-option" data-correct="false">Любой генератор изображений по текстовому описанию</button>
+                            <button class="quiz-option" data-correct="false">Голосовой переводчик без доступа к тексту</button>
+                        </div>
+                    </div>
+
+                    <div class="card quiz-question">
+                        <span class="tag">Вопрос 3 из 4</span>
+                        <h3>Как правильно составить промпт для разбора сложной задачи по кинематике?</h3>
+                        <div style="margin-top:12px;">
+                            <button class="quiz-option" data-correct="false">Написать только слово «Реши» и вставить условие без пояснений</button>
+                            <button class="quiz-option" data-correct="true">Задать роль учителя физики, попросить выписать дано, законы, проекции на оси OX/OY и объяснить каждый шаг</button>
+                            <button class="quiz-option" data-correct="false">Попросить выдать только конечное число без формул</button>
+                        </div>
+                    </div>
+
+                    <div class="card quiz-question">
+                        <span class="tag">Вопрос 4 из 4</span>
+                        <h3>Чьё имя носит МБОУ «Гимназия № 1» города Коврова?</h3>
+                        <div style="margin-top:12px;">
+                            <button class="quiz-option" data-correct="true">Александра Николаевича Барсукова — выдающегося математика-педагога и автора учебника алгебры</button>
+                            <button class="quiz-option" data-correct="false">Николая Ивановича Лобачевского</button>
+                            <button class="quiz-option" data-correct="false">Михаила Васильевича Ломоносова</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>МБОУ «Гимназия № 1 имени А. Н. Барсукова» города Коврова</strong>
+                <p style="margin-top:6px;">601900, Владимирская область, г. Ковров, ул. Абельмана, д. 15 • Тел.: +7 (49232) 2-12-32</p>
+                <p>E-mail: gimnaziya1_kovrov@mail.ru • Образовательный портал индивидуального проекта (10 класс, 2026 г.)</p>
+            </div>
+            <div>
+                <p><strong>Разделы сайта:</strong></p>
+                <p><a href="index.html">Главная</a> • <a href="gymnasium.html">О Гимназии</a> • <a href="catalog.html">Каталог ИИ</a> • <a href="teachers.html">Учителя</a> • <a href="practice.html">Практикум</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
