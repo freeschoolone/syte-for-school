@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ФактЧек — интерактивный тренажёр по проверке информации для школьников.">
+  <title>ФактЧек — тренажёр медиаграмотности</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="ФактЧек — на главную">
+      <span class="logo__mark">Ф</span>
+      <span>ФактЧек</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#method">Метод «ФАКТ»</a>
+      <a href="#memo">Памятка</a>
+    </nav>
+    <button class="button button--small" id="header-start" type="button">Начать тренировку</button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <h1>Не верь на слово.<br><span>Проверяй по фактам.</span></h1>
+        <p class="hero__lead">Интерактивный тренажёр научит замечать признаки недостоверной информации и принимать решение не по эмоциям, а по доказательствам.</p>
+        <div class="hero__actions">
+          <button class="button button--primary" id="hero-start" type="button">Пройти 8 ситуаций <span aria-hidden="true">→</span></button>
+          <a class="button button--ghost" href="#method">Узнать метод</a>
+        </div>
+        <p class="hero__note"><span aria-hidden="true">●</span> Работает без интернета · займёт около 7 минут</p>
+      </div>
+
+      <div class="hero__visual" aria-label="Пример проверки публикации">
+        <div class="signal-card signal-card--back">
+          <span>Срочно!</span>
+          <strong>Учёные скрывали это годами…</strong>
+        </div>
+        <div class="signal-card signal-card--main">
+          <div class="mock-profile">
+            <span class="mock-profile__avatar">?</span>
+            <span><strong>Новости каждый день</strong><small>Источник не указан</small></span>
+          </div>
+          <p>«Сенсационное открытие полностью изменит вашу жизнь!»</p>
+          <div class="evidence-tag"><span>!</span> Эмоции вместо доказательств</div>
+          <div class="verdict-stamp">НУЖНА ПРОВЕРКА</div>
+        </div>
+        <div class="floating-tip floating-tip--source"><span>А</span> Кто автор?</div>
+        <div class="floating-tip floating-tip--context"><span>К</span> Где контекст?</div>
+      </div>
+    </section>
+
+    <section class="problem section">
+      <div class="section-heading section-heading--split">
+        <div>
+          <p class="eyebrow">Почему это важно</p>
+          <h2>Фейк выглядит как новость.<br>Но работает как ловушка.</h2>
+        </div>
+        <p>Яркий заголовок вызывает эмоцию, алгоритмы ускоряют распространение, а на проверку уже не остаётся времени. Поэтому главный навык — уметь остановиться и проверить.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card">
+          <span class="problem-card__number">01</span>
+          <div class="problem-card__icon">⚡</div>
+          <h3>Сначала эмоция</h3>
+          <p>Страх, возмущение или восторг заставляют нажать «поделиться» раньше, чем появляется вопрос: «А это правда?»</p>
+        </article>
+        <article class="problem-card">
+          <span class="problem-card__number">02</span>
+          <div class="problem-card__icon">◎</div>
+          <h3>Источник теряется</h3>
+          <p>Скриншоты и пересказы путешествуют между чатами, а имя автора, дата и первоначальный контекст исчезают.</p>
+        </article>
+        <article class="problem-card">
+          <span class="problem-card__number">03</span>
+          <div class="problem-card__icon">↗</div>
+          <h3>Повтор кажется правдой</h3>
+          <p>Если одно утверждение встречается много раз, оно становится привычным, даже когда все публикации копируют одну ошибку.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="method section" id="method">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">Алгоритм проверки</p>
+        <h2>Четыре шага метода «ФАКТ»</h2>
+        <p>Запомнить легко, применить можно к новости, видео, фотографии или сообщению в чате.</p>
+      </div>
+      <div class="method-grid">
+        <article class="method-card">
+          <span class="method-card__letter">Ф</span>
+          <h3>Формулируй</h3>
+          <p>Отдели проверяемое утверждение от мнения, эмоций и громкого заголовка.</p>
+          <small>Что именно здесь утверждают?</small>
+        </article>
+        <article class="method-card">
+          <span class="method-card__letter">А</span>
+          <h3>Анализируй</h3>
+          <p>Найди автора, первоисточник, контакты редакции и сведения об эксперте.</p>
+          <small>Кто это сообщил и почему ему доверять?</small>
+        </article>
+        <article class="method-card">
+          <span class="method-card__letter">К</span>
+          <h3>Контекст</h3>
+          <p>Проверь дату, место, полную цитату, оригинал изображения и условия исследования.</p>
+          <small>Не вырван ли факт из контекста?</small>
+        </article>
+        <article class="method-card">
+          <span class="method-card__letter">Т</span>
+          <h3>Требуй подтверждения</h3>
+          <p>Сравни информацию с несколькими независимыми и компетентными источниками.</p>
+          <small>Кто ещё это подтверждает?</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="trainer section" id="trainer" aria-labelledby="trainer-title">
+      <div class="trainer__intro" id="trainer-intro">
+        <div>
+          <p class="eyebrow">Практика</p>
+          <h2 id="trainer-title">Открой дело № 1</h2>
+          <p>Перед тобой восемь смоделированных публикаций. Изучи карточку, открывай улики и решай: информации можно доверять или перед нами манипуляция.</p>
+          <ul class="trainer-rules">
+            <li><span>+10</span> за верный вердикт</li>
+            <li><span>+2</span> за каждую изученную улику</li>
+            <li><span>+4</span> если проверены все улики</li>
+          </ul>
+        </div>
+        <button class="button button--primary button--large" id="intro-start" type="button">Открыть первое дело</button>
+      </div>
+
+      <div class="quiz is-hidden" id="quiz" aria-live="polite">
+        <div class="quiz__topbar">
+          <div>
+            <span class="quiz__label" id="case-number">Дело 1 из 8</span>
+            <strong id="case-category">Новость</strong>
+          </div>
+          <div class="quiz__score">Баллы: <strong id="score">0</strong></div>
+        </div>
+        <div class="progress" aria-label="Прогресс тренировки">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+
+        <div class="case-layout">
+          <article class="post-card">
+            <div class="post-card__warning">Учебная ситуация · публикация смоделирована</div>
+            <div class="post-card__author">
+              <div class="post-card__avatar" id="case-avatar">Н</div>
+              <div><strong id="case-source"></strong><small id="case-meta"></small></div>
+              <span class="post-card__menu">•••</span>
+            </div>
+            <div class="post-card__media" id="case-media" role="img"></div>
+            <div class="post-card__body">
+              <span class="post-card__badge" id="case-badge"></span>
+              <h3 id="case-title"></h3>
+              <p id="case-text"></p>
+              <div class="post-card__stats"><span>♡ <b id="case-likes"></b></span><span>◯ <b id="case-comments"></b></span><span>↗ Поделиться</span></div>
+            </div>
+          </article>
+
+          <aside class="investigation">
+            <div class="investigation__heading">
+              <div><span>Лаборатория проверки</span><h3>Собери улики</h3></div>
+              <span class="evidence-counter" id="evidence-counter">0/3</span>
+            </div>
+            <p class="investigation__hint">Открой карточки перед ответом — каждая улика приносит дополнительные баллы.</p>
+            <div class="evidence-list" id="evidence-list"></div>
+            <fieldset class="verdict" id="verdict-fieldset">
+              <legend>Твой вердикт</legend>
+              <div class="verdict__buttons">
+                <button class="verdict-button verdict-button--trust" data-verdict="trust" type="button"><span>✓</span><strong>Можно доверять</strong><small>Есть основания считать достоверным</small></button>
+                <button class="verdict-button verdict-button--fake" data-verdict="fake" type="button"><span>!</span><strong>Манипуляция</strong><small>Фейк или искажение фактов</small></button>
+              </div>
+            </fieldset>
+          </aside>
+        </div>
+
+        <section class="feedback is-hidden" id="feedback" tabindex="-1">
+          <div class="feedback__mark" id="feedback-mark"></div>
+          <div class="feedback__content">
+            <p class="eyebrow" id="feedback-label"></p>
+            <h3 id="feedback-title"></h3>
+            <p id="feedback-explanation"></p>
+            <div class="feedback__lesson"><strong>Главный вывод:</strong> <span id="feedback-lesson"></span></div>
+          </div>
+          <button class="button button--dark" id="next-case" type="button">Следующее дело →</button>
+        </section>
+      </div>
+
+      <section class="results is-hidden" id="results" aria-labelledby="results-title">
+        <div class="results__score-ring"><strong id="result-percent">0%</strong><span>результат</span></div>
+        <p class="eyebrow">Расследование завершено</p>
+        <h2 id="results-title">Твой уровень: <span id="result-level"></span></h2>
+        <p id="result-summary"></p>
+        <div class="results__stats">
+          <div><strong id="result-correct">0/8</strong><span>верных решений</span></div>
+          <div><strong id="result-evidence">0/24</strong><span>улик изучено</span></div>
+          <div><strong id="result-points">0</strong><span>баллов набрано</span></div>
+          <div><strong id="best-score">0</strong><span>лучший результат</span></div>
+        </div>
+        <div class="recommendation" id="recommendation"></div>
+        <div class="results__actions">
+          <button class="button button--primary" id="restart" type="button">Пройти ещё раз</button>
+          <a class="button button--ghost" href="#memo">Открыть памятку</a>
+          <button class="button button--text" id="clear-best" type="button">Сбросить лучший результат</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="memo section" id="memo">
+      <div class="memo-sheet">
+        <div class="memo-sheet__header">
+          <div>
+            <p class="eyebrow">Сохрани перед публикацией</p>
+            <h2>Памятка «ФАКТ»</h2>
+          </div>
+          <button class="button button--light no-print" id="print-memo" type="button">⎙ Распечатать</button>
+        </div>
+        <p class="memo-sheet__lead">Если сообщение удивляет, пугает или злит — сделай паузу и задай четыре вопроса.</p>
+        <div class="memo-list">
+          <div><span>Ф</span><p><strong>Что именно утверждают?</strong> Убери оценки и эмоции. Сформулируй один факт, который можно проверить.</p></div>
+          <div><span>А</span><p><strong>Кто автор и где первоисточник?</strong> Ищи имя, компетенции, контакты и оригинальную публикацию.</p></div>
+          <div><span>К</span><p><strong>Каков полный контекст?</strong> Проверь дату, место, целую цитату, подпись к фото и условия исследования.</p></div>
+          <div><span>Т</span><p><strong>Есть ли независимые подтверждения?</strong> Сравни минимум два надёжных источника, а не копии одного текста.</p></div>
+        </div>
+        <div class="memo-sheet__footer"><strong>Нет источника — нет доказательства.</strong><span>Не уверен — не распространяй.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="logo logo--footer"><span class="logo__mark">Ф</span><span>ФактЧек</span></div>
+    <p>Тренажёр медиаграмотности · 2026</p>
+    <a href="#home">Наверх ↑</a>
+  </footer>
+
+  <script src="js/facts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
